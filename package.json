@@ -1,0 +1,19 @@
+{
+  "name": "mlh_node_chatapp",
+  "version": "1.0.0",
+  "description": "Chat app created with the plans of implementing some kind of ml function",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start" : "nodemon index.js"
+  },
+  "author": "Shubham and Thadd",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
