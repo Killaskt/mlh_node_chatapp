@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "node index.js",
-    "start" : "nodemon index.js"
+    "start": "nodemon index.js"
   },
   "author": "Shubham and Thadd",
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
+    "moment": "^2.26.0",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
