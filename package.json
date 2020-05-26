@@ -4,8 +4,8 @@
   "description": "Chat app created with the plans of implementing some kind of ml function",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js",
-    "start": "nodemon index.js"
+    "test": "node server.js",
+    "start": "nodemon server.js"
   },
   "author": "Shubham and Thadd",
   "license": "MIT",
