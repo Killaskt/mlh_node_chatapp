@@ -11,7 +11,7 @@ const formatMessage = require('./utils/message.js');
 const {userJoin, getCurrentUser, getRoomUsers, userLeave} = require('./utils/users.js');
 
 
-const PORT = 3000 || process.env.PORT;
+const PORT = 5000 || process.env.PORT;
 
 
 //get html pages ... may not be here long

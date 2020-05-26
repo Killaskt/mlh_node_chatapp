@@ -24,7 +24,7 @@ function userLeave(id) {
     }
 }
 
-// gwt all users in a room
+// get all users in a room
 function getRoomUsers(room) {
     return users.filter(user => user.room === room);
 }
