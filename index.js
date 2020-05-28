@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 
+const router = express.Router();
+
 app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
@@ -17,7 +19,9 @@ const PORT = 5000 || process.env.PORT;
 //get html pages ... may not be here long
 app.use(express.static(path.join(__dirname + '/public')));
 
-
+app.get('/', (req, res) => {
+    res.send({response: "server is up and running!"}).status(200);
+})
 
 app.get('/thaddg', (req, res) => {
     res.send('<img min-height=1000px src="https://media.discordapp.net/attachments/708421243392622625/710610359144153128/k6jbjcxo1ky41.gif"></img>');
@@ -25,7 +29,7 @@ app.get('/thaddg', (req, res) => {
 
 // run when client connects
 io.on('connection', socket => {
-    // console.log('new connection!');
+    console.log('new connection!');
 
     socket.on('joinRoom', ({username, room}) => {
         // console.log(data.username, data.room);
@@ -43,7 +47,7 @@ io.on('connection', socket => {
 
         // send users and room info
         io.to(user.room).emit('usersInRoom', {
-            room: user.room,
+            // room: user.room,
             users: getRoomUsers(user.room)
         });
     });

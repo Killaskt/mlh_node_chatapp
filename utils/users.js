@@ -16,7 +16,7 @@ function getCurrentUser(id) {
 
 // user leaves chat
 function userLeave(id) {
-    console.log('before times', users)
+    console.log('before times', users);
     const index = users.findIndex(user => user.id === id);
     console.log(index, ' ', id);
     if(index !== -1) {
